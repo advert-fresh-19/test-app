@@ -1,0 +1,60 @@
+<div class="profile-container">
+
+  <figure>
+    <img alt="" src="../../../../assets/images/LOGO.png">
+  </figure>
+
+  <h2>Добро пожаловать!</h2>
+
+  <div class="input-container">
+
+    <div class="group">
+      <label>Логин</label>
+      <input class="default"
+             type="text"
+             readonly
+             onfocus="this.removeAttribute('readonly')"
+             placeholder="Например: Lyavon">
+    </div>
+
+    <div class="group">
+      <label class="input-label">Имя</label>
+      <input type="text"
+             readonly
+             onfocus="this.removeAttribute('readonly')"
+             placeholder="Например: Иван">
+    </div>
+
+    <div class="group">
+      <label>Фамилия</label>
+      <input>
+    </div>
+
+    <div class="group">
+      <label>email</label>
+      <input>
+    </div>
+
+    <div class="group">
+      <label>Телефон</label>
+      <input>
+    </div>
+
+    <div class="group">
+      <label>Пароль</label>
+      <input>
+    </div>
+
+    <div class="group">
+      <label>Подтвердить пароль</label>
+      <input>
+    </div>
+
+  </div>
+
+  <div class="btn-container">
+    <button type="button" class="link-btn" [routerLink]="['/serviceLogin']">Войти</button>
+    <button class="active-btn">Регистрация</button>
+  </div>
+
+</div>

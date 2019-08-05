@@ -1,0 +1,29 @@
+@import "../../../../styles/colors";
+
+:host {
+  /* Display & Box Model */
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  > main {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: max-content;
+    grid-gap: 35px;
+    padding: 30px;
+
+    > section {
+      /* Display & Box Model */
+      min-height: 360px;
+      height: 100%;
+
+      /* Color & Styling */
+      background: $black;
+    }
+  }
+}
+
+
+

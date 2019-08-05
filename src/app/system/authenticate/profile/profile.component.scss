@@ -1,0 +1,62 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/mixins';
+
+:host {
+  /* Positioning */
+  @include flex-center;
+
+  /* Display & Box Model */
+  flex: 1;
+  height: 100%;
+
+  > div.profile-container {
+    /* Display & Box Model */
+    padding: 2em 3em;
+    border: .2em solid $darkgray;
+
+    /* Color & Styling */
+    background-color: $white;
+    border-radius: 2em;
+
+    > figure {
+      @include profile-logo;
+    }
+
+    > h2 {
+      /* Color & Styling */
+      color: $blue;
+
+      /* Positioning */
+      text-align: center;
+
+      /* Display & Box Model */
+      margin-bottom: 2rem;
+    }
+
+    > div.input-container {
+      /* Display & Box Model */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 750px;
+
+      > div.group {
+        @include custom-input();
+
+        &:last-child {
+          /* Display & Box Model */
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        /* Positioning */
+        justify-content: flex-start;
+      }
+    }
+
+    > div.btn-container {
+      @include btn-container;
+    }
+  }
+}
