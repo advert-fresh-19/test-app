@@ -1,0 +1,39 @@
+html, body {
+  /* Display & Box Model */
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  /* Text */
+  font-size: 15px;
+}
+
+* {
+  /* Display & Box Model */
+  box-sizing: border-box;
+  outline: none;
+
+  /* Text */
+  user-select: none;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    /* Color & Styling */
+    color: #666;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  /* Other */
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+figure {
+  /* Display & Box Model */
+  margin: 0;
+}

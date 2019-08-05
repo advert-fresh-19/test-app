@@ -1,0 +1,91 @@
+@import "colors";
+
+@mixin flex-center {
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin custom-input($width: 320px, $height: 52px) {
+  width: $width;
+  height: $height;
+  margin-bottom: 30px;
+  position: relative;
+
+  > label {
+    /* Display & Box Model */
+    padding: 0 .33rem;
+
+    /* Positioning */
+    position: absolute;
+    top: -.66rem;
+    left: 1rem;
+
+    /* Text */
+    font-size: 1.2em;
+
+    /* Color & Styling */
+    background: $white;
+    color: $blue;
+  }
+
+  > input {
+    /* Display & Box Model */
+    width: 100%;
+    height: 100%;
+    padding: 0 1.33rem;
+    border: 2px solid $blue;
+
+    /* Color & Styling */
+    border-radius: .33rem;
+
+    /* Text */
+    font-size: 1rem;
+  }
+
+  &.error {
+    label {
+      /* Color & Styling */
+      color: $red;
+    }
+
+    input {
+      /* Color & Styling */
+      border-color: $red;
+    }
+  }
+}
+
+@mixin btn-container {
+  /* Display & Box Model */
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+
+  /* Positioning */
+  justify-content: flex-end;
+
+  > button:not(.link-btn) {
+    margin-left: 2rem;
+  }
+
+  > button.link-btn {
+    /* Display & Box Model */
+    margin-right: auto;
+  }
+}
+
+@mixin profile-logo {
+  @include flex-center;
+
+  /* Positioning */
+  margin: 0;
+
+  > img {
+    /* Display & Box Model */
+    width: auto;
+    height: 80px;
+  }
+}

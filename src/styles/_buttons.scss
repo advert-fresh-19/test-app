@@ -1,0 +1,92 @@
+@import 'colors';
+@import 'mixins';
+
+button {
+  padding: .5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  &.active-btn {
+    /* Display & Box Model */
+    border: 3px solid $blue2;
+
+    /* Color & Styling */
+    border-radius: .5em;
+    background-color: $white;
+    color: $blue2;
+
+    &:hover {
+      /* Color & Styling */
+      background-color: $blue2;
+      color: $white;
+
+      /* Animations */
+      transition: all .5s ease-in-out;
+    }
+  }
+
+  &.link-btn {
+    /* Display & Box Model */
+    border: none;
+
+    /* Color & Styling */
+    background-color: transparent;
+    color: $blue2;
+
+    /* Text */
+    font-size: .9em;
+    font-weight: bold;
+
+    &:hover {
+      /* Color & Styling */
+      background-color: rgba(82, 118, 207, 0.11);
+
+      /* Animations */
+      transition: all .5s ease-in-out;
+    }
+  }
+}
+
+div.auth-btn {
+  @include flex-center;
+
+  /* Display & Box Model */
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+
+  /* Color & Styling */
+  border-radius: 100%;
+  background: $white;
+  color: $blue2;
+
+  /* Other */
+  cursor: pointer;
+
+  > i {
+    /* Text */
+    font-size: 1em;
+  }
+
+  &.profile {
+    /* Display & Box Model */
+    width: 50px;
+    height: 50px;
+
+    > i {
+      /* Text */
+      font-size: 3em;
+
+      /* Other */
+      pointer-events: none;
+    }
+  }
+
+  &:hover {
+    /* Color & Styling */
+    opacity: .5;
+
+    /* Animations */
+    transition: 1s;
+  }
+}

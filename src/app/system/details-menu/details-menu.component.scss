@@ -1,0 +1,53 @@
+@import "../../../styles/colors";
+
+:host {
+  /* Display & Box Model */
+  display: flex;
+
+  /* Positioning */
+  position: absolute;
+  right: 40px;
+
+  div.profile-menu {
+    /* Display & Box Model */
+    width: 200px;
+    padding: 10px 0;
+
+    /* Positioning */
+    position: absolute;
+    top: 75px;
+    right: 30px;
+
+    /* Color & Styling */
+    border-radius: 1em;
+    background: $blue;
+    color: $white;
+
+    /* Other */
+    z-index: 9999;
+
+    > div.user-info {
+      /* Display & Box Model */
+      padding: 10px;
+
+      /* Text */
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    > div.menu-item {
+      /* Display & Box Model */
+      padding: 5px 10px;
+
+      &:hover {
+        /* Color & Styling */
+        background: greenyellow;
+        color: grey;
+
+        /* Other */
+        cursor: pointer;
+      }
+    }
+  }
+}
