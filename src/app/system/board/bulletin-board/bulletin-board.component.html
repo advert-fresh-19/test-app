@@ -1,12 +1,5 @@
 <main>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
-  <section><app-advert></app-advert></section>
+  <section *ngFor="let item of viewListBulletin"><app-advert></app-advert></section>
 </main>
+
+<c-paginator (pagedItemsChange)="changeViewList($event)" [listItems]="allItems"></c-paginator>
