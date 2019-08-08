@@ -11,6 +11,9 @@ import { AdvertComponent } from './system/board/bulletin-board/advert/advert.com
 import { UserInfoComponent } from './system/board/users-board/user-info/user-info.component';
 import { DetailsMenuComponent } from './system/details-menu/details-menu.component';
 import { PaginatorComponent } from './system/paginator/paginator.component';
+import {
+  Tab, TabContentDirective, TabsetComponent, TabTitleDirective
+} from './system/board/bulletin-board/tabset/tabset.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,12 @@ import { PaginatorComponent } from './system/paginator/paginator.component';
     AdvertComponent,
     UserInfoComponent,
     DetailsMenuComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    DetailsMenuComponent,
+    TabsetComponent,
+    Tab,
+    TabTitleDirective,
+    TabContentDirective,
   ],
   imports: [
     BrowserModule,

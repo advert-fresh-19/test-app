@@ -1,0 +1,22 @@
+<div class="tabset">
+
+  <div class="tabcontent" *ngIf="!closeTabs">
+    <ng-template ngFor let-tab [ngForOf]="tabs">
+      <div *ngIf="tab.id === activeId">
+        <ng-template [ngTemplateOutlet]="tab.contentTpl?.templateRef"></ng-template>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="tabs">
+    <div *ngFor=" let tab of tabs"
+         class="tablinks"
+         [id]="tab.id"
+         [class.active]="tab.id === activeId"
+         [class.disabled]="tab.disabled"
+         (click)="openTab(tab.id)">
+      <span></span>
+    </div>
+  </div>
+
+</div>
