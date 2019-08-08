@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bulletin-board',
@@ -7,9 +7,485 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BulletinBoardComponent implements OnInit {
 
-  constructor() { }
+  public allItems: any[] = [
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+    {
+      name: "Item 1"
+    },
+    {
+      name: "Item 2"
+    },
+    {
+      name: "Item 3"
+    },
+    {
+      name: "Item 4"
+    },
+    {
+      name: "Item 5"
+    },
+    {
+      name: "Item 6"
+    },
+    {
+      name: "Item 7"
+    },
+    {
+      name: "Item 8"
+    },
+    {
+      name: "Item 9"
+    },
+    {
+      name: "Item 10"
+    },
+    {
+      name: "Item 11"
+    },
+    {
+      name: "Item 12"
+    },
+    {
+      name: "Item 13"
+    },
+  ];
 
-  ngOnInit() {
+  public viewListBulletin: any[] = [];
+
+  constructor(private cdRef: ChangeDetectorRef) { }
+
+  ngOnInit() {}
+
+  public changeViewList(value): void {
+    this.viewListBulletin = value;
+    this.cdRef.detectChanges();
   }
-
 }

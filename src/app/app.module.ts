@@ -10,6 +10,7 @@ import { UsersBoardComponent } from './system/board/users-board/users-board.comp
 import { AdvertComponent } from './system/board/bulletin-board/advert/advert.component';
 import { UserInfoComponent } from './system/board/users-board/user-info/user-info.component';
 import { DetailsMenuComponent } from './system/details-menu/details-menu.component';
+import { PaginatorComponent } from './system/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailsMenuComponent } from './system/details-menu/details-menu.compone
     UsersBoardComponent,
     AdvertComponent,
     UserInfoComponent,
-    DetailsMenuComponent
+    DetailsMenuComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
