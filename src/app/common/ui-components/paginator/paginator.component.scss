@@ -1,25 +1,33 @@
-@import "../../../styles/mixins";
-@import "../../../styles/colors";
+@import "../../../../styles/mixins";
+@import "../../../../styles/colors";
 
 :host {
-  display: flex;
+  /* Display & Box Model */
   width: 100%;
   height: auto;
   @include flex-center;
 
   > ul.pagination {
-    display: inline-block;
+    /* Display & Box Model */
     padding-left: 0;
-    margin: 20px 0;
-    border-radius: 4px;
+    margin-bottom: 1rem;
+
+    /* Color & Styling */
+    border-radius: .33rem;
 
     > li {
+      /* Display & Box Model */
       display: inline;
 
       &.active {
         a {
+          /* Transformation */
           transform: scale(1.2);
+
+          /* Positioning */
           z-index: 1;
+
+          /* Color & Styling */
           background-color: $greenhover;
           border-radius: .5rem;
         }
@@ -27,28 +35,33 @@
 
       &.disabled {
         a {
+          /* Other */
           pointer-events: none;
+
+          /* Color & Styling */
           opacity: .5;
         }
       }
 
       &:not(.active):hover > a {
-        color: #23527c;
+        /* Color & Styling */
         background-color: #eee;
         border-color: #ddd;
+        color: #23527c;
         cursor: pointer;
       }
 
       > a {
-        position: relative;
-        float: left;
+        /* Display & Box Model */
         padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
-        color: #337ab7;
-        text-decoration: none;
-        background-color: #fff;
         border: 1px solid #ddd;
+
+        /* Text */
+        text-decoration: none;
+
+        /* Color & Styling */
+        color: #337ab7;
+        background-color: #fff;
       }
     }
   }

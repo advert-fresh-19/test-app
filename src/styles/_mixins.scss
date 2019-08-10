@@ -1,16 +1,21 @@
 @import "colors";
 
 @mixin flex-center {
-  /* Positioning */
+  /* Display & Box Model */
   display: flex;
+
+  /* Positioning */
   align-items: center;
   justify-content: center;
 }
 
 @mixin custom-input($width: 320px, $height: 52px) {
+  /* Display & Box Model */
   width: $width;
   height: $height;
   margin-bottom: 30px;
+
+  /* Positioning */
   position: relative;
 
   > label {

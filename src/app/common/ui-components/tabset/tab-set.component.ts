@@ -13,7 +13,7 @@ export class TabContentDirective {
 @Directive({selector: 'tab'})
 export class Tab implements AfterContentChecked {
   @Input() id: string;
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
 
   titleTpl: TabTitleDirective | null;
   contentTpl: TabContentDirective | null;
@@ -29,12 +29,12 @@ export class Tab implements AfterContentChecked {
 
 @Component({
   selector: 'app-tabset',
-  templateUrl: './tabset.component.html',
-  styleUrls: ['./tabset.component.scss']
+  templateUrl: './tab-set.component.html',
+  styleUrls: ['./tab-set.component.scss']
 })
-export class TabsetComponent {
+export class TabSetComponent {
   public activeId: number = null;
-  public closeTabs: boolean = true;
+  public closeTabs = true;
 
   @ContentChildren(Tab) tabs !: QueryList<Tab>;
 

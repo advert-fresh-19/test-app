@@ -1,7 +1,7 @@
 import * as _ from 'underscore';
 
 export class PagerService {
-  getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
+  getPager(totalItems: number, currentPage: number = 1, pageSize: number = 8) {
     const totalPages = Math.ceil(totalItems / pageSize);
 
     let startPage: number, endPage: number;
