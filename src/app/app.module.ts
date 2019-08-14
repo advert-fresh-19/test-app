@@ -11,9 +11,8 @@ import { AdvertComponent } from './system/board/bulletin-board/advert/advert.com
 import { UserInfoComponent } from './system/board/users-board/user-info/user-info.component';
 import { DetailsMenuComponent } from './system/details-menu/details-menu.component';
 import { PaginatorComponent } from './system/paginator/paginator.component';
-import {
-  Tab, TabContentDirective, TabsetComponent, TabTitleDirective
-} from './system/board/bulletin-board/tabset/tabset.component';
+import { Tab, TabContentDirective, TabsetComponent, TabTitleDirective } from './system/board/bulletin-board/tabset/tabset.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,8 @@ import {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
