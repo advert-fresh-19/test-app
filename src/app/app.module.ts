@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -11,6 +12,8 @@ import {AdvertComponent} from './system/board/bulletin-board/advert/advert.compo
 import {UserInfoComponent} from './system/board/users-board/user-info/user-info.component';
 import {DetailsMenuComponent} from './system/details-menu/details-menu.component';
 import {CommonUiModule} from 'src/app/common/ui-components/common-ui.module';
+import {UserService} from 'src/app/common/services/user.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,10 @@ import {CommonUiModule} from 'src/app/common/ui-components/common-ui.module';
     BrowserModule,
     AppRoutingModule,
     CommonUiModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

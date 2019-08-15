@@ -6,19 +6,25 @@
 
   <h2>Добро пожаловать!</h2>
 
-  <div class="group">
+  <div class="group" [ngClass]="checkedControlValidations(loginControl) ? 'error' : ''">
     <label>Логин или Почта</label>
-    <input type="text">
+    <input type="text" [formControl]="loginControl">
+    <span *ngIf="checkedControlValidations(loginControl)">
+      {{loginControl?.errors.messageKey}}
+    </span>
   </div>
 
-  <div class="group">
+  <div class="group" [ngClass]="checkedControlValidations(passwordControl) ? 'error' : ''">
     <label>Пароль</label>
-    <input type="password">
+    <input type="password" [formControl]="passwordControl">
+    <span *ngIf="checkedControlValidations(passwordControl)">
+      {{passwordControl?.errors.messageKey}}
+    </span>
   </div>
 
   <div class="btn-container">
     <button type="button" class="link-btn" [routerLink]="['/signup']">Регистрация</button>
-    <button type="button" class="active-btn">Войти</button>
+    <button type="button" class="active-btn" (click)="login()">Войти</button>
   </div>
 
 </div>
