@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-details-menu',
@@ -8,23 +8,17 @@ import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core
 export class DetailsMenuComponent implements OnInit, OnDestroy {
 
   @ViewChild('profileBtn') profileBtn: ElementRef;
-
-  public isLoggedUser = false;
+  @Input() public isLoggedUser: boolean;
+  @Input() public userName: string;
 
   public isOpenProfileMenu = false;
 
-  constructor() { }
+  private _outsideClickListener = (event) => this.hideOnClickOutside(event);
 
   ngOnInit() {
   }
 
-  private _outsideClickListener = (event) => this.hideOnClickOutside(event);
-
-
-  ngOnDestroy(): void {
-  }
-
-  public hideOnClickOutside(event): void {
+  private hideOnClickOutside(event): void {
     if (this.profileBtn && this.profileBtn.nativeElement === event.target) {
       this.isOpenProfileMenu = !this.isOpenProfileMenu;
     } else if (this.isOpenProfileMenu) {
@@ -40,4 +34,7 @@ export class DetailsMenuComponent implements OnInit, OnDestroy {
   public logout(): void {
   }
 
+  ngOnDestroy(): void {
+    document.removeEventListener('click', this._outsideClickListener);
+  }
 }

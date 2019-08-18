@@ -5,6 +5,8 @@ import {map} from 'rxjs/operators';
 
 import {CustomValidators} from 'src/app/common/validators/custom-validators';
 import {UserService} from 'src/app/common/services/user.service';
+import {ProfileService} from 'src/app/common/services/profile.service';
+import {RouteNavigationService} from 'src/app/common/routing/route-navigation.service';
 
 @Component({
   selector: 'app-signin',
@@ -18,7 +20,9 @@ export class SigninComponent implements OnInit {
   public passwordControl: FormControl;
   public loginControl: FormControl;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+              private profileService: ProfileService,
+              private routeNavigationService: RouteNavigationService) {
   }
 
   ngOnInit() {
@@ -49,6 +53,8 @@ export class SigninComponent implements OnInit {
       .subscribe((user) => {
         if (user) {
           if (user.password === this.passwordControl.value) {
+            this.profileService.userProfile = user;
+            this.routeNavigationService.toAdverts();
             alert('Всё ОК!');
           } else {
             alert('Вы ввели не верный пароль пользователя для данной системы!');

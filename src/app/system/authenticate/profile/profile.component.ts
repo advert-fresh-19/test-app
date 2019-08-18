@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
   private subscription: Subscription = new Subscription();
 
   public form: FormGroup;
-  public isChangeProfile: boolean = false;
+  public isChangeProfile = false;
 
   constructor(private userService: UserService) {
     // this.isChangeProfile = route.snapshot.data['mode'] === RegistrationComponent.CHANGE_PROFILE_MODE;

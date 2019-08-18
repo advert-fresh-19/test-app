@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular/common';
 
 import {Tab, TabContentDirective, TabSetComponent, TabTitleDirective} from 'src/app/common/ui-components/tabset/tab-set.component';
 import {PaginatorComponent} from 'src/app/common/ui-components/paginator/paginator.component';
@@ -19,7 +19,7 @@ import {EmailForbiddenDirective} from 'src/app/common/ui-components/directives/e
     EmailForbiddenDirective,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
   ],
   exports: [
     InputRestrictDirective,
