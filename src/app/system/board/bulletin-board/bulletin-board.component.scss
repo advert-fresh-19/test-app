@@ -2,26 +2,35 @@
 
 :host {
   /* Display & Box Model */
-  display: block;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   height: 100%;
-  width: 100%;
 
-  > main {
+  > div.container {
     /* Display & Box Model */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    grid-template-rows: max-content;
-    grid-gap: 35px;
-    padding: 1rem;
+    display: block;
+    height: 100%;
+    width: 100%;
 
-    > section {
+    > main {
       /* Display & Box Model */
-      min-height: 350px;
-      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-rows: max-content;
+      grid-gap: 35px;
+      padding: 1rem;
 
-      /* Color & Styling */
-      //background: $black;
+      > section {
+        /* Display & Box Model */
+        min-height: 350px;
+        height: 100%;
+      }
     }
+  }
+
+  > c-paginator {
+    margin-top: auto;
   }
 }
 

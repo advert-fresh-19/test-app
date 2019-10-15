@@ -5,7 +5,7 @@
   <li [ngClass]="pager.currentPage === 1 ? 'disabled' : ''">
     <a (click)="setPage(pager.currentPage - 1)">Предыдущий</a>
   </li>
-  <li *ngFor="let page of pager.pages" [ngClass]="pager.currentPage === page ? 'active' : ''">
+  <li *ngFor="let page of pager.pages" [ngClass]="pager.currentPage === page ? 'active' : ''" class="page-number">
     <a (click)="setPage(page)">{{page}}</a>
   </li>
   <li [ngClass]="pager.currentPage === pager.totalPages ? 'disabled' : ''">
