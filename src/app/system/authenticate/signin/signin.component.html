@@ -23,8 +23,10 @@
   </div>
 
   <div class="btn-container">
-    <button type="button" class="link-btn" [routerLink]="['/signup']">Регистрация</button>
+    <button type="button" class="link-btn" (click)="toSignup()" [routerLink]="['authenticate', 'signup']">Регистрация</button>
     <button type="button" class="active-btn" (click)="login()">Войти</button>
   </div>
+
+
 
 </div>

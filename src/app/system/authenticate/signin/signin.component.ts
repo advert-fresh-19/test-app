@@ -69,4 +69,8 @@ export class SigninComponent implements OnInit {
     return control.invalid && control.touched ||
       this.showValidationsFields && control.invalid;
   }
+
+  public toSignup(): void {
+    this.routeNavigationService.toSignup();
+  }
 }

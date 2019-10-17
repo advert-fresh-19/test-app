@@ -119,7 +119,7 @@
   </div>
 
   <div class="btn-container">
-    <button type="button" class="link-btn" [routerLink]="['/serviceLogin']">Войти</button>
+    <button type="button" class="link-btn"  (click)="toSignin()" [routerLink]="['/serviceLogin']">Войти</button>
     <button class="active-btn" (click)="action()">Регистрация</button>
   </div>
 

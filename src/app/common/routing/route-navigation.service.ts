@@ -16,6 +16,10 @@ export class RouteNavigationService {
   }
 
   public toSignIn(): Promise<boolean> {
-    return this.router.navigate(['/signin']);
+    return this.router.navigate(['authenticate', 'serviceLogin']);
+  }
+
+  public toSignup(): any {
+    return this.router.navigate(['authenticate', 'signup']);
   }
 }

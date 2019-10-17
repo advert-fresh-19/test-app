@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {User, UserService} from 'src/app/common/services/user.service';
 import {CustomValidators} from 'src/app/common/validators/custom-validators';
+import {RouteNavigationService} from "../../../common/routing/route-navigation.service";
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ProfileComponent implements OnInit {
   public form: FormGroup;
   public isChangeProfile = false;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,  private routeNavigationService: RouteNavigationService) {
     // this.isChangeProfile = route.snapshot.data['mode'] === RegistrationComponent.CHANGE_PROFILE_MODE;
   }
 
@@ -100,5 +101,9 @@ export class ProfileComponent implements OnInit {
     const control = this.form.get(controlName);
     return control.invalid && control.touched ||
       this.showValidationsFields && control.invalid;
+  }
+
+  public toSignin(): void {
+    this.routeNavigationService.toSignIn();
   }
 }

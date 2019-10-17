@@ -11,6 +11,5 @@ export class AdvertComponent implements OnInit {
   @Input() advert: Advert;
 
   ngOnInit() {
-    console.log(this.advert);
   }
 }

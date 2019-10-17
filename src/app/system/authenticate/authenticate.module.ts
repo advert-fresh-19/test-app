@@ -6,6 +6,7 @@ import {SigninComponent} from 'src/app/system/authenticate/signin/signin.compone
 import {ProfileComponent} from 'src/app/system/authenticate/profile/profile.component';
 import {UserService} from 'src/app/common/services/user.service';
 import {AuthenticateRoutingModule} from 'src/app/common/routing/auhtenticate-routing.module';
+import {ProfileService} from "../../common/services/profile.service";
 
 @NgModule({
   declarations: [
