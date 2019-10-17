@@ -19,8 +19,9 @@
 
 <div class="container">
   <main>
-    <section *ngFor="let item of viewListBulletin"><app-advert></app-advert></section>
+    <section *ngFor="let item of viewListBulletin"><app-advert [advert]="item"></app-advert></section>
   </main>
 </div>
+
 
 <c-paginator (pagedItemsChange)="changeViewList($event)" [listItems]="allItems"></c-paginator>

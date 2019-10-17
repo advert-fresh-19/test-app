@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Advert } from 'src/app/system/board/bulletin-board/advert.service';
 
 @Component({
   selector: 'app-advert',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertComponent implements OnInit {
 
-  constructor() { }
+  @Input() advert: Advert;
 
   ngOnInit() {
+    console.log(this.advert);
   }
-
 }

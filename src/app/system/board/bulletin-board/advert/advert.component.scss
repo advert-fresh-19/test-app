@@ -1,9 +1,87 @@
+@import "../../../../../styles/mixins";
+
 :host {
   /* Display & Box Model */
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 100%;
+  //width: 100%;
+  padding: 1rem;
 
   /* Color & Styling */
-  background: greenyellow;
+  background: whitesmoke;
+
+  > header {
+    background-color: #1976d2;
+    display: flex;
+    flex:0 0 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    border-radius: .66rem;
+    padding: 0 1rem;
+  }
+
+  > main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    //background-color: #a0c83c;
+    margin: .66rem;
+
+    .test {
+        @include multiLineEllipsis;
+    }
+    > label {
+      margin: .33rem 0;
+      word-break: break-all;
+      color: grey;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > span {
+        display: inline-block;
+        width: 90px;
+        font-weight: bold;
+        color: #1464d2;
+        margin-left: .33rem;
+      }
+    }
+
+  }
+
+  > footer {
+    display: flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: space-between;
+
+    > label.price {
+        color: white;
+        background: #e34065;
+        padding: .66rem;
+        font-size: 1.2em;
+        border-radius: .66rem;
+    }
+
+    > a.more-info {
+      color: yellowgreen;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        font-size: 1.4em;
+      }
+    }
+
+  }
 }

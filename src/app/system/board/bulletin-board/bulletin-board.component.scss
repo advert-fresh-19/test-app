@@ -26,6 +26,14 @@
         min-height: 350px;
         height: 100%;
       }
+    > section {
+      /* Display & Box Model */
+      min-height: 350px;
+      max-height: 400px;
+      height: 100%;
+
+      /* Color & Styling */
+      background: $black;
     }
   }
 

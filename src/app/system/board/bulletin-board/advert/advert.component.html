@@ -1,0 +1,16 @@
+<header>
+  <label>{{advert.title}}</label>
+</header>
+
+<main>
+  <label><span>Категория: </span>{{advert.category}}</label>
+  <label><span>Создано: </span>{{advert.created}}</label>
+  <label><span>Обновлено: </span>{{advert.modified ? advert.modified : 'не обновлялось'}}</label>
+  <label class="test"><span>Описание: </span>{{advert.description}}</label>
+</main>
+
+<footer>
+  <label class="price">{{advert.price}}р.</label>
+  <a class="more-info">подробнее</a>
+  <label>{{advert.count}}</label>
+</footer>
